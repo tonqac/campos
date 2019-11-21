@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Campos de concentración</title>
+    <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/fontawesome-free/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="libs/virtual-keyboard/css/keyboard-basic.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="libs/videojs/dist/video-js/video-js.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+    <div id="loading_principal">
+        <strong id="loading_bars"><span></span></strong>
+        <div>
+            <img src="src/images/loading.svg"><br>
+            COMPROBANDO INFORMACI&Oacute;N...
+        </div>
+    </div>
+
+    <div class="iddle">
+        <div class="cont-texto">
+            <h3 id="iddleTittle"></h3>
+            <span id="iddleBajada" class="bajada"></span>
+            <img src="src/images/icon-click.png" alt="Presion&aacute; la pantalla para iniciar la aplicaci&oacute;"
+                class="img-iddle img-fluid" />
+            <div class="contador">
+                <span>3</span>
+                <span>2</span>
+                <span>1</span>
+            </div>
+
+        </div>
+        <div class="texto-adios">
+            <i class="far fa-clock"></i>
+            <h3></h3>
+            <span class="bajada"></span>
+        </div>
+        <div class="logo-museo">
+            <svg version="1.1" id="svg-museum-logo" width="200px" xmlns:x="&amp;ns_extend;" xmlns:i="&amp;ns_ai;"
+                xmlns:graph="&amp;ns_graphs;" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 340 123.3"
+                style="enable-background:new 0 0 340 123.3;" xml:space="preserve">
+                <g>
+                    <path class="museum-logo-path"
+                        d="M99.3,90.8v-7l-0.1-0.4l-4,3.8l-5.7-20.8l16.8-17l-29.1-7.6L69,12.1L45.8,35.6l-1.5,1.5L41,35.4l-0.3,0.2
+            l0-5.3l-5.4,3.2l0.1,16L24.1,60.9l-12.2-9.1l19.2-8.3l0.7-6.2L1.2,50.6l19.1,14.2l-7.9,7.9l18.1,4.7l2.9,10.6l-3-3.1l-1.7,6
+            l11.8,12.2h7.5l-6.8-7l-1.5-5.4L36.6,79l3.5,0.9l15.4,28.4l2.9-5.1l8.7-14.2l20.8,5.4l-13.9,14.1h7.6L94,96.1l4,1l-1.1-4L99.3,90.8
+            z M95.9,52.2l-6.2,6.2l-5.2-9.2L95.9,52.2z M70.1,84.3l2.6-4.3l-6.2-0.2L55.7,97.4l-9.8-18.1l-2.2-0.1L42.6,75L35,73l-2.2-7.9
+            l-4.4,4.4l0.5,1.9l-6.1-1.6l1.8-1.9l3.3,2.4l0.7-6.2l-0.2-0.1l7-7.1l0,3.5l5.4,3.1l0-6.2l-0.1-16.2L59.7,51l-0.3-6.2l-10-5.1
+            l2.5-2.5l14.5-14.6l4.8,17.6l-2.7-0.7l1.6,6l6,1.6l1.1,0.3l8.5,15.1l-4.2,4.3l-4.4,4.4l1.6,6l4.4-4.4l1.9-1.9l5.2,18.8L70.1,84.3z"
+                        style="fill: rgb(255, 255, 255);"></path>
+                    <g>
+                        <path class="museum-logo-path"
+                            d="M139.3,52.7l-2.4,8.7H134l-2.4-8.7l0.1,2.7v6h-2.8V47.9h4.1l2.4,8.7l2.4-8.7h4.2v13.5h-2.8v-6L139.3,52.7z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M152.8,60.5c-0.7,0.7-2,1.1-3.8,1.1c-1.8,0-3-0.4-3.8-1.1c-0.7-0.7-1.1-1.9-1.1-3.4v-9.3h2.8V57
+                c0,0.8,0.2,1.3,0.5,1.6c0.3,0.3,0.8,0.5,1.6,0.5c0.8,0,1.3-0.2,1.6-0.5c0.3-0.3,0.5-0.9,0.5-1.6v-9.2h2.8v9.3
+                C153.9,58.6,153.6,59.8,152.8,60.5z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M160.2,55.7c-1.5-0.2-2.6-0.6-3.3-1.2c-0.7-0.6-1-1.5-1-2.7v-0.2c0-1.2,0.4-2.2,1.2-2.9s2-1.1,3.5-1.1
+                c1.7,0,2.9,0.4,3.6,1.1c0.8,0.8,1.2,1.9,1.2,3.5v0.4h-2.8c0-0.9-0.2-1.6-0.5-2c-0.3-0.4-0.8-0.6-1.5-0.6h-0.2
+                c-0.6,0-1,0.1-1.3,0.4c-0.3,0.3-0.5,0.6-0.5,1.1v0.1c0,0.5,0.2,0.9,0.5,1.2c0.3,0.3,1,0.5,1.9,0.6c1.5,0.2,2.6,0.6,3.4,1.2
+                c0.7,0.6,1.1,1.5,1.1,2.7v0.2c0,1.3-0.4,2.3-1.3,3c-0.8,0.7-2.1,1.1-3.6,1.1c-1.6,0-2.8-0.4-3.7-1.1c-0.8-0.8-1.2-1.9-1.2-3.5
+                v-0.2h2.8c0,1.6,0.7,2.4,2,2.4h0.2c0.6,0,1.1-0.1,1.4-0.4c0.3-0.3,0.5-0.7,0.5-1.2v-0.1c0-0.5-0.2-0.9-0.5-1.2
+                C161.8,56.1,161.1,55.9,160.2,55.7z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M167.4,47.9h8.3v2.4h-5.5v3h4.6v2.4h-4.6V59h5.5v2.4h-8.3V47.9z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M182.6,61.6c-1.8,0-3.1-0.5-3.9-1.6c-0.8-1.1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1.1,2.1-1.6,3.9-1.6c1.8,0,3.1,0.5,3.9,1.6c0.8,1.1,1.2,2.7,1.2,5.1V55c0,2.3-0.4,4-1.2,5.1
+                C185.7,61.1,184.4,61.6,182.6,61.6z M182.5,59.2h0.2c0.8,0,1.4-0.3,1.7-1c0.3-0.7,0.5-1.8,0.5-3.2v-0.7c0-1.4-0.2-2.5-0.5-3.2
+                c-0.3-0.7-0.9-1-1.7-1h-0.2c-0.8,0-1.4,0.3-1.7,1c-0.3,0.7-0.5,1.8-0.5,3.2V55c0,1.4,0.2,2.5,0.5,3.2
+                C181.1,58.8,181.7,59.2,182.5,59.2z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M203.4,55c0,2.3-0.4,4-1.3,5c-0.9,1-2.3,1.5-4.4,1.5h-4.1V47.9h4.1c2,0,3.5,0.5,4.4,1.5c0.9,1,1.3,2.6,1.3,5
+                V55z M196.4,59h1.2c1.1,0,1.9-0.3,2.4-0.9c0.4-0.6,0.7-1.6,0.7-3.1v-0.7c0-1.4-0.2-2.4-0.7-3.1c-0.4-0.6-1.2-0.9-2.4-0.9h-1.2V59z
+                " style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M205.4,47.9h8.3v2.4h-5.5v3h4.6v2.4h-4.6V59h5.5v2.4h-8.3V47.9z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M223.5,61.4h-7.8V47.9h2.8V59h5V61.4z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M235.7,47.9h2.8v13.5h-2.8v-5.7h-3.9v5.7h-2.8V47.9h2.8v5.4h3.9V47.9z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M245.7,61.6c-1.8,0-3.1-0.5-3.9-1.6c-0.8-1.1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1.1,2.1-1.6,3.9-1.6c1.8,0,3.1,0.5,3.9,1.6c0.8,1.1,1.2,2.7,1.2,5.1V55c0,2.3-0.4,4-1.2,5.1
+                C248.7,61.1,247.4,61.6,245.7,61.6z M245.6,59.2h0.2c0.8,0,1.4-0.3,1.7-1c0.3-0.7,0.5-1.8,0.5-3.2v-0.7c0-1.4-0.2-2.5-0.5-3.2
+                c-0.3-0.7-0.9-1-1.7-1h-0.2c-0.8,0-1.4,0.3-1.7,1c-0.3,0.7-0.5,1.8-0.5,3.2V55c0,1.4,0.2,2.5,0.5,3.2
+                C244.2,58.8,244.7,59.2,245.6,59.2z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M260.6,61.4h-7.8V47.9h2.8V59h5V61.4z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M266.8,61.6c-1.8,0-3.1-0.5-3.9-1.6c-0.8-1.1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1.1,2.1-1.6,3.9-1.6c1.8,0,3.1,0.5,3.9,1.6c0.8,1.1,1.2,2.7,1.2,5.1V55c0,2.3-0.4,4-1.2,5.1
+                C269.9,61.1,268.6,61.6,266.8,61.6z M266.7,59.2h0.2c0.8,0,1.4-0.3,1.7-1c0.3-0.7,0.5-1.8,0.5-3.2v-0.7c0-1.4-0.2-2.5-0.5-3.2
+                c-0.3-0.7-0.9-1-1.7-1h-0.2c-0.8,0-1.4,0.3-1.7,1c-0.3,0.7-0.5,1.8-0.5,3.2V55c0,1.4,0.2,2.5,0.5,3.2
+                C265.3,58.8,265.9,59.2,266.7,59.2z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M276.5,55c0,1.4,0.2,2.5,0.5,3.2c0.3,0.7,0.9,1,1.8,1h0.2c1.2,0,1.9-0.8,1.9-2.4h2.8v0.2
+                c0,1.6-0.4,2.8-1.2,3.6c-0.8,0.7-2,1.1-3.6,1.1c-1.8,0-3.1-0.5-3.9-1.6c-0.8-1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1,2.1-1.6,3.9-1.6c1.6,0,2.9,0.4,3.7,1.1c0.8,0.7,1.2,2,1.2,3.6V53h-2.8c0-1-0.1-1.7-0.4-2.2c-0.3-0.5-0.8-0.7-1.5-0.7h-0.2
+                c-0.9,0-1.4,0.3-1.8,1c-0.3,0.7-0.5,1.7-0.5,3.2V55z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M288,47.8h3.9l3.4,13.6h-3l-0.7-2.9h-3.3l-0.6,2.9h-3L288,47.8z M289.9,51.1l-1.1,5h2.2L289.9,51.1z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M305.2,60.5c-0.7,0.7-2,1.1-3.8,1.1c-1.8,0-3-0.4-3.8-1.1c-0.7-0.7-1.1-1.9-1.1-3.4v-9.3h2.8V57
+                c0,0.8,0.2,1.3,0.5,1.6c0.3,0.3,0.8,0.5,1.6,0.5c0.8,0,1.3-0.2,1.6-0.5c0.3-0.3,0.5-0.9,0.5-1.6v-9.2h2.8v9.3
+                C306.3,58.6,305.9,59.8,305.2,60.5z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M312.5,55.7c-1.5-0.2-2.6-0.6-3.3-1.2c-0.7-0.6-1-1.5-1-2.7v-0.2c0-1.2,0.4-2.2,1.2-2.9s2-1.1,3.5-1.1
+                c1.7,0,2.9,0.4,3.6,1.1c0.8,0.8,1.2,1.9,1.2,3.5v0.4H315c0-0.9-0.2-1.6-0.5-2c-0.3-0.4-0.8-0.6-1.5-0.6h-0.2c-0.6,0-1,0.1-1.3,0.4
+                c-0.3,0.3-0.5,0.6-0.5,1.1v0.1c0,0.5,0.2,0.9,0.5,1.2c0.3,0.3,1,0.5,1.9,0.6c1.5,0.2,2.6,0.6,3.4,1.2c0.7,0.6,1.1,1.5,1.1,2.7v0.2
+                c0,1.3-0.4,2.3-1.3,3c-0.8,0.7-2.1,1.1-3.6,1.1c-1.6,0-2.8-0.4-3.7-1.1c-0.8-0.8-1.2-1.9-1.2-3.5v-0.2h2.8c0,1.6,0.7,2.4,2,2.4
+                h0.2c0.6,0,1.1-0.1,1.4-0.4c0.3-0.3,0.5-0.7,0.5-1.2v-0.1c0-0.5-0.2-0.9-0.5-1.2C314.1,56.1,313.5,55.9,312.5,55.7z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M325,50.3v11.1h-2.8V50.3h-3.1v-2.4h9.1v2.4H325z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M334.4,61.6c-1.8,0-3.1-0.5-3.9-1.6c-0.8-1.1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1.1,2.1-1.6,3.9-1.6c1.8,0,3.1,0.5,3.9,1.6c0.8,1.1,1.2,2.7,1.2,5.1V55c0,2.3-0.4,4-1.2,5.1
+                C337.5,61.1,336.1,61.6,334.4,61.6z M334.3,59.2h0.2c0.8,0,1.4-0.3,1.7-1c0.3-0.7,0.5-1.8,0.5-3.2v-0.7c0-1.4-0.2-2.5-0.5-3.2
+                c-0.3-0.7-0.9-1-1.7-1h-0.2c-0.8,0-1.4,0.3-1.7,1c-0.3,0.7-0.5,1.8-0.5,3.2V55c0,1.4,0.2,2.5,0.5,3.2
+                C332.9,58.8,333.5,59.2,334.3,59.2z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M129.1,68.7h3.8c0.6,0,1.1,0.1,1.6,0.2c0.5,0.1,0.9,0.3,1.3,0.6c0.4,0.3,0.7,0.6,0.9,1.1
+                c0.2,0.5,0.3,1,0.3,1.7v0.3c0,1.3-0.6,2.2-1.7,2.7c1.4,0.5,2.1,1.5,2.1,2.9v0.3c0,1.3-0.4,2.3-1.2,2.8c-0.8,0.6-1.8,0.9-3.1,0.9
+                h-4.1V68.7z M132.9,70.3h-2v4.2h2c0.7,0,1.2-0.2,1.7-0.5c0.4-0.3,0.7-0.8,0.7-1.5v-0.2c0-0.7-0.2-1.2-0.7-1.5
+                C134.1,70.5,133.6,70.3,132.9,70.3z M133.2,76.1h-2.3v4.6h2.3c0.7,0,1.3-0.2,1.7-0.5c0.4-0.3,0.7-0.9,0.7-1.7v-0.2
+                c0-0.7-0.2-1.3-0.7-1.6C134.5,76.3,133.9,76.1,133.2,76.1z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M144,82.5c-1.6,0-2.8-0.3-3.5-1c-0.7-0.7-1.1-1.8-1.1-3.4v-9.4h1.8V78c0,1.1,0.2,1.8,0.6,2.3
+                c0.4,0.4,1.1,0.7,2.1,0.7c1,0,1.7-0.2,2.1-0.7c0.4-0.4,0.6-1.2,0.6-2.3v-9.3h1.8v9.4c0,1.6-0.4,2.7-1.1,3.4
+                C146.8,82.2,145.6,82.5,144,82.5z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M150.8,68.7h7.8v1.6h-6v4.3h5.2v1.6h-5.2v4.5h6v1.6h-7.8V68.7z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M169.8,68.7v13.6h-1.9l-5.7-10.4l0.1,3v7.4h-1.7V68.7h1.9l5.7,10.4l-0.1-3v-7.4H169.8z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M176.7,82.5c-1.7,0-2.9-0.5-3.7-1.6c-0.8-1.1-1.2-2.7-1.2-5.1v-0.7c0-2.3,0.4-4,1.2-5.1
+                c0.8-1.1,2-1.6,3.7-1.6c1.6,0,2.9,0.5,3.7,1.6c0.8,1.1,1.2,2.7,1.2,5.1v0.7c0,2.3-0.4,4-1.2,5.1C179.6,82,178.4,82.5,176.7,82.5z
+                M176.6,80.9h0.1c1,0,1.8-0.4,2.2-1.2c0.5-0.8,0.7-2.1,0.7-3.8v-0.7c0-1.7-0.2-3-0.7-3.8c-0.5-0.8-1.2-1.2-2.2-1.2h-0.1
+                c-1,0-1.8,0.4-2.2,1.2c-0.5,0.8-0.7,2.1-0.7,3.8v0.7c0,1.7,0.2,3,0.7,3.8C174.9,80.5,175.6,80.9,176.6,80.9z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M187.5,76.1c-1.5-0.2-2.5-0.6-3.2-1.2c-0.7-0.6-1-1.4-1-2.5v-0.2c0-1.2,0.4-2.1,1.2-2.8c0.8-0.7,1.9-1,3.3-1
+                c1.5,0,2.7,0.4,3.4,1.1c0.7,0.7,1.1,1.9,1.1,3.4v0.4h-1.8c0-1.2-0.2-2-0.6-2.5c-0.4-0.5-1.1-0.8-2-0.8h-0.1
+                c-0.7,0-1.3,0.2-1.8,0.6c-0.5,0.4-0.7,0.9-0.7,1.5v0.1c0,0.7,0.2,1.2,0.6,1.6c0.4,0.4,1.2,0.6,2.3,0.8c1.5,0.2,2.6,0.6,3.3,1.2
+                c0.7,0.6,1,1.5,1,2.6v0.2c0,1.2-0.4,2.2-1.2,2.9c-0.8,0.7-1.9,1-3.4,1c-1.5,0-2.7-0.4-3.4-1.2c-0.8-0.8-1.2-1.9-1.2-3.4v-0.2h1.8
+                c0,1,0.2,1.8,0.7,2.3c0.5,0.5,1.2,0.8,2,0.8h0.1c0.8,0,1.5-0.2,1.9-0.6c0.5-0.4,0.7-1,0.7-1.6v-0.1c0-0.7-0.2-1.2-0.7-1.6
+                C189.3,76.5,188.6,76.3,187.5,76.1z" style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M200.5,68.6h2.5l3.7,13.7h-2l-0.9-3.3h-4.4l-0.9,3.3h-2L200.5,68.6z M201.8,70.6l-1.8,6.8h3.6L201.8,70.6z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M210.2,68.7v13.6h-1.8V68.7H210.2z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path"
+                            d="M214.5,77v5.3h-1.8V68.7h4c2.9,0,4.4,1.3,4.4,4V73c0,1.9-0.8,3.1-2.3,3.7l2.3,5.6h-2L217,77H214.5z
+                M214.5,75.4h2.3c0.3,0,0.6,0,0.8-0.1c0.3-0.1,0.5-0.2,0.8-0.3c0.3-0.2,0.5-0.4,0.6-0.8c0.2-0.3,0.2-0.8,0.2-1.2v-0.2
+                c0-0.5-0.1-0.9-0.2-1.2c-0.2-0.3-0.4-0.6-0.6-0.8c-0.3-0.2-0.5-0.3-0.8-0.3c-0.3-0.1-0.5-0.1-0.8-0.1h-2.3V75.4z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M223.1,68.7h7.8v1.6h-6v4.3h5.2v1.6h-5.2v4.5h6v1.6h-7.8V68.7z"
+                            style="fill: rgb(255, 255, 255);"></path>
+                        <path class="museum-logo-path" d="M236.6,76.1c-1.5-0.2-2.5-0.6-3.2-1.2c-0.7-0.6-1-1.4-1-2.5v-0.2c0-1.2,0.4-2.1,1.2-2.8c0.8-0.7,1.9-1,3.3-1
+                c1.5,0,2.7,0.4,3.4,1.1c0.7,0.7,1.1,1.9,1.1,3.4v0.4h-1.8c0-1.2-0.2-2-0.6-2.5c-0.4-0.5-1.1-0.8-2-0.8h-0.1
+                c-0.7,0-1.3,0.2-1.8,0.6c-0.5,0.4-0.7,0.9-0.7,1.5v0.1c0,0.7,0.2,1.2,0.6,1.6c0.4,0.4,1.2,0.6,2.3,0.8c1.5,0.2,2.6,0.6,3.3,1.2
+                c0.7,0.6,1,1.5,1,2.6v0.2c0,1.2-0.4,2.2-1.2,2.9c-0.8,0.7-1.9,1-3.4,1c-1.5,0-2.7-0.4-3.4-1.2c-0.8-0.8-1.2-1.9-1.2-3.4v-0.2h1.8
+                c0,1,0.2,1.8,0.7,2.3c0.5,0.5,1.2,0.8,2,0.8h0.1c0.8,0,1.5-0.2,1.9-0.6c0.5-0.4,0.7-1,0.7-1.6v-0.1c0-0.7-0.2-1.2-0.7-1.6
+                C238.5,76.5,237.7,76.3,236.6,76.1z" style="fill: rgb(255, 255, 255);"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
+    <div class="guiContainer">
+    </div>
+
+    <div class="contain">
+        <h1>Campos de concentración</h1>
+        <div id="buscadores">
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane tab-buscador active">
+                    <ul id="campos" class="lista-buscar list-unstyled">
+                        <li>
+                            <strong>Principales</strong>
+                        </li>
+                        <li>
+                            <button data-val="1" type="button" class="btn">
+                                <strong class="c1"></strong>
+                                <span>Campos de exterminio</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="2" type="button" class="btn">
+                                <strong class="c2"></strong>
+                                <span>Campos de concentración - exterminio</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="3" type="button" class="btn">
+                                <strong class="c3"></strong>
+                                <span>Campos de concentración</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="4" type="button" class="btn">
+                                <strong class="c4"></strong>
+                                <span>Campos de concentración y tránsito</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="5" type="button" class="btn">
+                                <strong class="c5"></strong>
+                                <span>Sitios de matanza de los Einsatzgruppen</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul id="zonas" class="lista-buscar list-unstyled">
+                        <li>
+                            <strong>Zonas</strong>
+                        </li>
+                        <li>
+                            <button data-val="1" type="button" class="btn">
+                                <strong class="z1"></strong>
+                                <span>Tercer Reich</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="2" type="button" class="btn">
+                                <strong class="z2"></strong>
+                                <span>Italia en su máxima extensión</span>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-val="3" type="button" class="btn">
+                                <strong class="z3"></strong>
+                                <span>Aliados del eje</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <ul id="stats" class="lista-buscar list-unstyled">
+                        <li>
+                            <strong>Estadísticas</strong>
+                        </li>
+                        <li>
+                            <button type="button" class="btn" data-val="1" data-remote="src/images/stats.png">
+                                <span>% Ver estadísticas</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="mapa"></div>
+        <div id="popup">
+            <div id="contVideo">
+                <button type="button" class="btn btn-link btn-cerrar"><i class="fas fa-arrow-left"></i> Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="no_results" class="alert alert-danger" role="alert">
+        <a class="close" aria-label="close">&times;</a>
+        No se encontraron resultados.
+    </div>
+</body>
+
+<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtjbRNPncz0LJT5WPKwuTS4tPoOWPVU5U" async defer></script>
+
+<script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="libs/gsap/src/minified/TweenMax.min.js"></script>
+<script type="text/javascript" src="libs/markerclusterer/src/markerclusterer.js"></script>
+<script type="text/javascript" src="libs/virtual-keyboard/js/jquery.keyboard.js"></script>
+<script type="text/javascript" src="libs/typeahead-js/dist/typeahead.bundle.js"></script>
+<script type="text/javascript" src="libs/datgui/build/dat.gui.min.js"></script>
+<script type="text/javascript" src="libs/statsjs/build/stats.min.js"></script>
+<script type="text/javascript" src="libs/lightbox/dist/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="libs/fontawesome-free/js/all.min.js"></script>
+<script type="text/javascript" src="js/virtual-keyboard.js"></script>
+<script type="text/javascript" src="libs/slick/slick.min.js"></script>
+<script type="text/javascript" src="libs/videojs/dist/video-js/video.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+
+</html>
